@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" >
    @include('tree.head')
+   @include('tree.bottom')
+   <script type="text/javascript" src="../angular/SigninFormController.js"></script>
+   <script>
+      angular.module("login").constant("CSRF_TOKEN", '{{ csrf_token() }}');
+   </script>
 <body >
 <div class="app app-header-fixed ">
   <div class="app app-header-fixed ">
@@ -45,11 +50,8 @@
       </div>
     </div>
 </div>
-  @include('tree.bottom')
-  <script type="text/javascript" src="../angular/SigninFormController.js"></script>
-  <script>
-      angular.module("login").constant("CSRF_TOKEN", '{{ csrf_token() }}');
-  </script>
+
+
 </body>
 
 </html>

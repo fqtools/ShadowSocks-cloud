@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" >
    @include('tree.head')
+   @include('tree.bottom')
+   <script type="text/javascript" src="../angular/SigninFormController.js"></script>
+   <script>
+      angular.module("login").constant("CSRF_TOKEN", '{{ csrf_token() }}');
+   </script>
 <body >
 <div class="app app-header-fixed ">
   
@@ -31,16 +36,12 @@
     </form>
   </div>
  
-    <p>
-  <small class="text-muted">&copy;  2015 rumia.me</small>
-</p>
+  <p>
+      <small class="text-muted">&copy;  2015 rumia.me</small>
+  </p>
   </div>
 </div>
-  @include('tree.bottom')
-  <script type="text/javascript" src="../angular/SigninFormController.js"></script>
-  <script>
-      angular.module("login").constant("CSRF_TOKEN", '{{ csrf_token() }}');
-  </script>
+ 
 </body>
 
 </html>
