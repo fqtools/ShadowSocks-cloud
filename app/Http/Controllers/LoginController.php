@@ -18,5 +18,14 @@ class LoginController extends Controller
 
         return response()->json();
     }
+     public function signupAction(Request $request)
+    {
+        //登陆
+        $username=$request->Input('username');
+        $password=$request->Input('password');
+        $email=$request->Input('email');
+
+        return response()->json();
+    }
 
 }

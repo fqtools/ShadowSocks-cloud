@@ -3,41 +3,53 @@
    @include('tree.head')
 <body >
 <div class="app app-header-fixed ">
+  <div class="app app-header-fixed ">
   
 
-<div  ng-app ="app" class="container w-xxl w-auto-xs" ng-controller="SigninFormController" ng-init="app.settings.container = false;">
-  <a href class="navbar-brand block m-t">Shadowsocks-cloud</a>
-  <div class="m-b-lg">
-    <div class="wrapper text-center">
-      <strong>(0.0)Zzzzz</strong>
-    </div>
-    <form name="form" class="form-validation">
-      <div class="text-danger wrapper text-center" ng-show="authError">
-          @{{authError}}
-      </div>
-      <div class="list-group list-group-sm">
-        <div class="list-group-item">
-          <input type="email" placeholder="Email" class="form-control no-border" ng-model="user.email" required>
+    <div ng-app="login" class="container w-xxl w-auto-xs" ng-controller="SigninFormController" ng-init="app.settings.container = false;">
+      <a href class="navbar-brand block m-t">Shadowsocks-cloud</a>
+      <div class="m-b-lg">
+        <div class="wrapper text-center">
+          <strong>(0.0)Zzzzz</strong>
         </div>
-        <div class="list-group-item">
-           <input type="password" placeholder="Password" class="form-control no-border" ng-model="user.password" required>
-        </div>
+        <form name="form" class="form-validation">
+          <div class="text-danger wrapper text-center" ng-show="authError">
+               @{{authError}}
+          </div>
+          <div class="list-group list-group-sm">
+            <div class="list-group-item">
+              <input placeholder="Name" class="form-control no-border" ng-model="user.name" required>
+            </div>
+            <div class="list-group-item">
+              <input type="email" placeholder="Email" class="form-control no-border" ng-model="user.email" required>
+            </div>
+            <div class="list-group-item">
+               <input type="password" placeholder="Password" class="form-control no-border" ng-model="user.password" required>
+            </div>
+          </div>
+          <div class="checkbox m-b-md m-t-none">
+            <label class="i-checks">
+              <input type="checkbox" ng-model="agree" required><i></i> 同意 <a href>网站条例</a>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="signup()" ng-disabled='form.$invalid'>注册</button>
+          <div class="line line-dashed"></div>
+          <p class="text-center"><small>已有账号?</small></p>
+          <a href="/signin" class="btn btn-lg btn-default btn-block">登录</a>
+        </form>
       </div>
-      <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="login()" ng-disabled='form.$invalid'>登陆</button>
-      <div class="text-center m-t m-b"><a ui-sref="access.forgotpwd">忘记密码?</a></div>
-      <div class="line line-dashed"></div>
-      <p class="text-center"><small>还没有注册?</small></p>
-      <a ui-sref="access.signup" class="btn btn-lg btn-default btn-block">创建一个新的账户</a>
-    </form>
-  </div>
- 
-    <p>
-  <small class="text-muted">&copy;  2014 rumia.me</small>
+    
+        <p>
+      <small class="text-muted">&copy;  2015 rumia.me</small>
 </p>
-  </div>
-</div>t>
+      </div>
+    </div>
+</div>
   @include('tree.bottom')
   <script type="text/javascript" src="../angular/SigninFormController.js"></script>
+  <script>
+      angular.module("login").constant("CSRF_TOKEN", '{{ csrf_token() }}');
+  </script>
 </body>
 
 </html>

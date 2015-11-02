@@ -10,7 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+//视图路由
 Route::get('/', function () {
     return view('welcome');
 });
@@ -21,4 +21,6 @@ Route::get('/signin',function(){
 Route::get('/signup',function(){
 	return view ('signup');
 });
+//数据路由
 Route::post('/signinAction','LoginController@signinAction');
+Route::post('/signupAction','LoginController@signupAction');

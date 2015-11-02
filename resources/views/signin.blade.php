@@ -27,7 +27,7 @@
       <div class="text-center m-t m-b"><a ui-sref="access.forgotpwd">忘记密码?</a></div>
       <div class="line line-dashed"></div>
       <p class="text-center"><small>还没有注册?</small></p>
-      <a ui-sref="access.signup" class="btn btn-lg btn-default btn-block">创建一个新的账户</a>
+      <a /href="/signup" class="btn btn-lg btn-default btn-block">创建一个新的账户</a>
     </form>
   </div>
  
