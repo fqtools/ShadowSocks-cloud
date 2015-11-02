@@ -15,5 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/key/{key}/keys/{keys}',function($argv,$argc){
+	
 	echo $argv."--".$argc;
+	echo App\Http\Controllers\Bin\CommandController::class;
 });
