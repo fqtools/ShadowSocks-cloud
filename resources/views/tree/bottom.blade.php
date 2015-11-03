@@ -7,3 +7,4 @@
 <script src="js/ui-toggle.js"></script>
 <script src="js/ui-client.js"></script>
 <script src="../libs/angular/angular/angular.js"></script>
+<script src="js/all.js"></script>

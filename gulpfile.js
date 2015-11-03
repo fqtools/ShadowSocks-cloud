@@ -1,5 +1,4 @@
 var elixir = require('laravel-elixir');
-
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -11,6 +10,15 @@ var elixir = require('laravel-elixir');
  |
  */
 
+// elixir(function(mix) {
+//     mix.sass('app.scss');
+// });
+
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.scripts([
+        'SigninFormController.js',
+      
+    ]);
 });
+
+

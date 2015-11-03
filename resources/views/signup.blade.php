@@ -2,7 +2,6 @@
 <html lang="en" >
    @include('tree.head')
    @include('tree.bottom')
-   <script type="text/javascript" src="../angular/SigninFormController.js"></script>
    <script>
       angular.module("login").constant("CSRF_TOKEN", '{{ csrf_token() }}');
    </script>

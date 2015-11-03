@@ -1,6 +1,6 @@
 var login = angular.module('login', []);
 
-login.controller('SigninFormController', function($scope,$http,CSRF_TOKEN){
+login.controller('SigninFormController', ["$scope","$http","CSRF_TOKEN",function($scope,$http,CSRF_TOKEN){
   	//登录
   	$scope.login=function() {	
   		$http({
@@ -44,5 +44,5 @@ login.controller('SigninFormController', function($scope,$http,CSRF_TOKEN){
 
   	};
 
-});
+}]);
 
