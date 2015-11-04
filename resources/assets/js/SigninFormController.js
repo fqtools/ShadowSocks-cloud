@@ -9,12 +9,13 @@ login.controller('SigninFormController', ["$scope","$http","CSRF_TOKEN",function
   			headers: {'Content-Type' : 'application/x-www-form-urlencoded'},
   			data:$.param({
   					'_token':CSRF_TOKEN,
-  					'username': $scope.user.email,
+  					'email': $scope.user.email,
   					'password': $scope.user.password
   				})
   		}).success(function(data){
-  			if (data) {
+  			if (data==true) {
   				//跳转
+          location.href="/home"
   			}else{
   				//返回错误
   				$scope.authError=data
@@ -34,8 +35,9 @@ login.controller('SigninFormController', ["$scope","$http","CSRF_TOKEN",function
   					'password': $scope.user.password
   				})
   		}).success(function(data){
-  			if (data) {
+  			if (data==true) {
   				//跳转
+          location.href="/home"
   			}else{
   				//返回错误
   				$scope.authError=data

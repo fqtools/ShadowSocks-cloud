@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -12,11 +13,15 @@ class LoginController extends Controller
     public function signinAction(Request $request)
     {
         //登陆
-        $username=$request->Input('username');
+        $email=$request->Input('email');
         $password=$request->Input('password');
-        
-
-        return response()->json();
+        if (Auth::attempt([
+                'email'=>$email,
+                'password'=>$password   
+            ])) {
+                  return response()->json(true);
+         } 
+        return response()->json("用户名或者密码错误");
     }
      public function signupAction(Request $request)
     {

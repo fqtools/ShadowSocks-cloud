@@ -11,16 +11,17 @@
 |
 */
 //视图路由
+
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/signin',function(){
-	return view ('signin');
-});
 
-Route::get('/signup',function(){
-	return view ('signup');
-});
+Route::get('home', ['middleware' => 'auth', 'uses'=>'DashboardController@index']);
+
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
 //数据路由
 Route::post('/signinAction','LoginController@signinAction');
 Route::post('/signupAction','LoginController@signupAction');
