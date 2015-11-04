@@ -43,7 +43,7 @@
                 </li>
                 <li class="divider"></li>
                 <li>
-                  <a href="page_signin.html">Logout</a>
+                  <a href="/auth/logout">退出</a>
                 </li>
               </ul>
               <!-- / dropdown -->
@@ -55,8 +55,8 @@
           <!-- nav -->
           <nav ui-nav class="navi clearfix">
             <ul class="nav">
-              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-                <span>Navigation</span>
+    <!--           <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span>导航</span>
               </li>
               <li>
                 <a href class="auto">      
@@ -67,24 +67,7 @@
                   <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
                   <span class="font-bold">Dashboard</span>
                 </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a href>
-                      <span>Dashboard</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="index.html">
-                      <span>Dashboard v1</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="dashboard.html">
-                      <b class="label bg-info pull-right">N</b>
-                      <span>Dashboard v2</span>
-                    </a>
-                  </li>
-                </ul>
+      
               </li>
               <li>
                 <a href="mail.html">
@@ -93,10 +76,10 @@
                   <span class="font-bold">Email</span>
                 </a>
               </li>
-              <li class="line dk"></li>
+              <li class="line dk"></li> -->
 
               <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-                <span>Components</span>
+                <span>功能导航</span>
               </li>
               <li>
                 <a href class="auto">      
@@ -322,21 +305,21 @@
               <li class="line dk hidden-folded"></li>
 
               <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">          
-                <span>Your Stuff</span>
+                <span>我的资料</span>
               </li>  
               <li>
                 <a href="page_profile.html">
                   <i class="icon-user icon text-success-lter"></i>
                   <b class="badge bg-success pull-right">30%</b>
-                  <span>Profile</span>
+                  <span>更新资料</span>
                 </a>
               </li>
-              <li>
+             <!--  <li>
                 <a href>
                   <i class="icon-question icon"></i>
                   <span>Documents</span>
                 </a>
-              </li>
+              </li> -->
             </ul>
           </nav>
           <!-- nav -->

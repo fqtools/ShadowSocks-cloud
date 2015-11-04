@@ -12,7 +12,7 @@
         <a href="#/" class="navbar-brand text-lt">
           <i class="fa fa-btc"></i>
           <img src="img/logo.png" alt="." class="hide">
-          <span class="hidden-folded m-l-xs">Angulr</span>
+          <span class="hidden-folded m-l-xs">S&C</span>
         </a>
         <!-- / brand -->
       </div>
