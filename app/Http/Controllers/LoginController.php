@@ -22,7 +22,7 @@ class LoginController extends Controller
                 'email'=>$email,
                 'password'=>$password   
             ])) {
-                  return response()->json(true);
+                return response()->json(true);
          } 
         return response()->json("用户名或者密码错误");
     }
@@ -31,7 +31,7 @@ class LoginController extends Controller
     public function signupAction(Request $request)
     
     {
-        //登陆
+        //注册
         $username=$request->Input('username');
         $password=$request->Input('password');
         $email=$request->Input('email');
