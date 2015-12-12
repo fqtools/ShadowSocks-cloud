@@ -39,7 +39,7 @@
           <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="signup()" ng-disabled='form.$invalid'>注册</button>
           <div class="line line-dashed"></div>
           <p class="text-center"><small>已有账号?</small></p>
-          <a href="/signin" class="btn btn-lg btn-default btn-block">登录</a>
+          <a href="/auth/login" class="btn btn-lg btn-default btn-block">登录</a>
         </form>
       </div>
     
